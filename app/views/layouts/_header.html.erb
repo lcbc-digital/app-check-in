@@ -1,8 +1,13 @@
-<!-- <header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
 		<%= link_to "LCBC Check-In", root_path, id: "logo" %>
 		<nav>
-			
+			<ul class="nav navbar-nav navbar-right">
+				<% if logged_in? %>
+					<li><%= link_to "Edit Profile", current_user %></li>
+					<li><%= link_to "Check-In", '#' %></li>
+				<% end %>
+			</ul>
 		</nav>				      
 	</div>
-</header> -->
+</header>
