@@ -6,6 +6,8 @@
 				<% if logged_in? %>
 					<li><%= link_to "Edit Profile", current_user %></li>
 					<li><%= link_to "Check-In", '#' %></li>
+				<% else %>
+					<li><%= link_to "Log in", login_path %></li>
 				<% end %>
 			</ul>
 		</nav>				      
