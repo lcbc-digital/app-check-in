@@ -22,7 +22,6 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   	assert_redirected_to @user
   	follow_redirect!
   	assert_template 'users/show'
-  	assert_select "a[href=?]", user_path(@user)
   end
 
   test "login with valid information followed by logout" do
@@ -32,7 +31,6 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   	assert_redirected_to @user
   	follow_redirect!
   	assert_template 'users/show'
-  	assert_select "a[href=?]", user_path(@user)
 
   	delete logout_path
   	assert_not is_logged_in?
