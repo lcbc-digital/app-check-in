@@ -1,0 +1,24 @@
+<% provide(:title, "Check-In") %>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+		<%= form_for(@user) do |f| %>
+			
+			<%= select("Campus", "Campus_id", [['Manheim','Manheim'],
+																				['Harrisburg','Harrisburg'],
+																				['Ephrata','Ephrata'], 
+																				['York','York'], 
+																				['Lancaster City','Lancaster City'], 
+																				['Branch Creek','Branch Creek'], 
+																				['Columbia Montour','Columbia Montour']], 
+																				{ :class => "form-control" },
+																				{prompt: 'Select A Campus'}) %>
+
+			<%= f.submit "Check-In", class: "btn btn-primary" %>
+		<% end %>
+
+		<%= button_to "Edit Profile", user_url(@user), :id => "edit-profile",
+      :class => "btn btn-default", :method => :get %>
+
+	</div>
+</div>
