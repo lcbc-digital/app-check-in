@@ -13,6 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= bootstrap
+//= require jquery-ui/selectmenu
 //= require turbolinks
 //= require_tree .
 
+$(function() {
+  $('.selectmenu').selectmenu();
+});
