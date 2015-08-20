@@ -10,11 +10,12 @@
 																				['York','York'], 
 																				['Lancaster City','Lancaster City'], 
 																				['Branch Creek','Branch Creek'], 
-																				['Columbia Montour','Columbia Montour']], 
-																				{ :class => "form-control" },
-																				{prompt: 'Select A Campus'}) %>
+																				['Columbia-Montour','Columbia-Montour']],
+																				{prompt: 'Select Campus'},
+																				{ :class => "form-control selectmenu" }
+																				) %>
 
-			<%= f.submit "Check-In", class: "btn btn-primary" %>
+			<%= f.submit "Check-In", class: "btn btn-default" %>
 		<% end %>
 
 		<%= button_to "Edit Profile", user_url(@user), :id => "edit-profile",
