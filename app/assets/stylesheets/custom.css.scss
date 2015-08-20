@@ -242,14 +242,30 @@ select.form-control {
 	margin-top: 20px;
 }
 
+#login_link {
+	margin-bottom: 15px;
+}
+
 .login_link {
 	text-align: center;
 	text-transform: uppercase;
-	letter-spacing: 2px;
+	letter-spacing: 4px;
 	font-weight: lighter;
-	font-size: 0.8em;
+	font-size: 0.7em;
 	display: block;
 	margin-top: 30px;
+}
+
+.bottom {
+	margin-top: 90%;
+}
+
+#edit-profile {
+	margin-top: 135%;
+}
+
+.mtop {
+	margin-top: 15px;
 }
 
 .btn {

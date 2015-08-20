@@ -12,6 +12,10 @@
 			<%= f.submit "Log-in", class: "btn btn-primary" %>
 		<% end %>
 		
-		<p>New here? <%= link_to "Sign up now!", signup_path %></p>
+		<%= button_to "Forgot Password?", signup_path, :id => "forgot_password_link",
+      :class => "btn btn-default mtop", :method => :get %>
+		
+    <%= button_to "Create Profile", signup_path, :id => "create_profile_link",
+      :class => "btn btn-default bottom", :method => :get %>
 	</div>
 </div>
