@@ -50,11 +50,11 @@ textarea {
 	}
 }
 
-.alert-success {
+.alert {
 	min-height: 8%;
 	margin-bottom: 0;
 	& + .follow-alert {
-		height: 92%;
+		height: 90%;
 		padding-top: 20px;
 	}
 }
