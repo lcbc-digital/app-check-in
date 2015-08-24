@@ -13,9 +13,26 @@ $gray-medium-light: #eaeaea;
 
 
 /* universal */
+html {	
+	height: 100%;
+}
 
 body {
+	height: 100%;
 	padding-top: 30px;
+}
+
+.container {
+	height: 100%;
+}
+
+.row {
+	height: 100%;
+}
+
+.col-md-6.col-md-offset-3 {
+	height: 100%;
+	position: relative;
 }
 
 section {
@@ -238,6 +255,14 @@ select.form-control {
 }
 
 /* Buttons */
+.form-button {
+	bottom: 3%;
+  position: absolute;
+  left: 0;
+  padding: 0 10px;
+  width: 100%;
+}
+
 #edit-profile {
 	margin-top: 20px;
 }
@@ -256,16 +281,12 @@ select.form-control {
 	margin-top: 30px;
 }
 
-.bottom {
-	margin-top: 90%;
-}
-
 #edit-profile {
 	margin-top: 135%;
 }
 
 .mtop {
-	margin-top: 15px;
+	margin-top: 10px;
 }
 
 .btn {

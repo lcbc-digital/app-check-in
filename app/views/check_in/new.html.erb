@@ -18,7 +18,7 @@
 			<%= f.submit "Check-In", class: "btn btn-default" %>
 		<% end %>
 
-		<%= button_to "Edit Profile", user_url(@user), :id => "edit-profile",
+		<%= button_to "Edit Profile", user_url(@user), :id => "edit-profile", form_class: "form-button",
       :class => "btn btn-default", :method => :get %>
 
 	</div>
