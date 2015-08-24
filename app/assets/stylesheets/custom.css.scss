@@ -246,6 +246,7 @@ select.form-control {
 	margin-bottom: 20px;
 	border-radius: 2px;
 	border-color: #4396C0;
+	/*z-index: 5;*/
 
 	.ui-icon-triangle-1-s {
 		display: none;
@@ -265,7 +266,7 @@ select.form-control {
 
 #submit-check-in {
 	position: relative;
-	z-index: 10;
+	/*z-index: 10;*/
 }
 
 /* Buttons */
@@ -295,9 +296,9 @@ select.form-control {
 	margin-top: 30px;
 }
 
-#edit-profile {
+/*#edit-profile {
 	margin-top: 135%;
-}
+}*/
 
 .mtop {
 	margin-top: 10px;
