@@ -50,6 +50,15 @@ textarea {
 	}
 }
 
+.alert-success {
+	min-height: 8%;
+	margin-bottom: 0;
+	& + .follow-alert {
+		height: 92%;
+		padding-top: 20px;
+	}
+}
+
 /* typography */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
