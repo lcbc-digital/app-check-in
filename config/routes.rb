@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   root                 'users#new'
   get    'signup'   => 'users#new'
   get    'login'    => 'sessions#new'
-  get    'check-in' => 'check_in#new'
-  post   'check-in' => 'check_in#create'
+  get    'check-in' => 'check_ins#new'
+  post   'check-in' => 'check_ins#create'
   post   'login'    => 'sessions#create'
   delete 'logout'   => 'sessions#destroy'
   resources :users

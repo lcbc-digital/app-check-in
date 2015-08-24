@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	has_many :check_ins
 	attr_accessor :remember_token
 
 	before_save { email.downcase! }
