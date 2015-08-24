@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
   		log_in(user)
   		remember user # this calls the remember in sessions_helper.rb
   		#params[:session][:remember_me] == '1' ? remember(user) : forget(user) ### Not doing this in mobile app
-  		redirect_to check_ins_path #user #rails converts this to user_url(user)
+  		redirect_to check_in_path #user #rails converts this to user_url(user)
   	else
   		# Create an error message
   		flash.now[:danger] = 'Invalid email/password combination'

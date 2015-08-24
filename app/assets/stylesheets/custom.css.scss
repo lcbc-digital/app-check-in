@@ -233,7 +233,7 @@ select.form-control {
 
 }
 
-#Campus_Campus_id-button.ui-selectmenu-button {
+#check_in_campus-button.ui-selectmenu-button {
 	margin-bottom: 20px;
 	border-radius: 2px;
 	border-color: #4396C0;
@@ -252,6 +252,11 @@ select.form-control {
 		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		text-transform: uppercase;
 	}
+}
+
+#submit-check-in {
+	position: relative;
+	z-index: 10;
 }
 
 /* Buttons */

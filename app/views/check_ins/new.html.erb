@@ -4,7 +4,7 @@
   <div class="col-md-6 col-md-offset-3">
 		<%= form_for(@check_in) do |f| %>
 			
-			<%= select("Campus", "Campus_id", [['Manheim','Manheim'],
+			<%= select(:check_in, :campus, [['Manheim','Manheim'],
 																				['Harrisburg','Harrisburg'],
 																				['Ephrata','Ephrata'], 
 																				['York','York'], 
@@ -12,10 +12,10 @@
 																				['Branch Creek','Branch Creek'], 
 																				['Columbia-Montour','Columbia-Montour']],
 																				{prompt: 'Select Campus'},
-																				{ :class => "form-control selectmenu" }
+																				{ :class => "form-control selectmenu", "data-native-menu"=>"false" }
 																				) %>
 
-			<%= f.submit "Check-In", class: "btn btn-default" %>
+			<%= f.submit "Check-In", :id => "submit-check-in", class: "btn btn-default" %>
 		<% end %>
 
 		<%= button_to "Edit Profile", edit_user_path(current_user),  :id => "edit-profile", form_class: "form-button",#user_url(@user), :id => "edit-profile", form_class: "form-button",

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  root                 'users#new'
+  root                 'check_ins#new'#users#new'
   get    'signup'   => 'users#new'
   get    'login'    => 'sessions#new'
   get    'check-in' => 'check_ins#new'
@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   post   'login'    => 'sessions#create'
   delete 'logout'   => 'sessions#destroy'
   resources :users
-
+  resources :check_ins, only: [:new, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
