@@ -50,6 +50,15 @@ textarea {
 	}
 }
 
+.alert {
+	min-height: 8%;
+	margin-bottom: 0;
+	& + .follow-alert {
+		height: 90%;
+		padding-top: 20px;
+	}
+}
+
 /* typography */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
@@ -237,6 +246,7 @@ select.form-control {
 	margin-bottom: 20px;
 	border-radius: 2px;
 	border-color: #4396C0;
+	/*z-index: 5;*/
 
 	.ui-icon-triangle-1-s {
 		display: none;
@@ -256,7 +266,7 @@ select.form-control {
 
 #submit-check-in {
 	position: relative;
-	z-index: 10;
+	/*z-index: 10;*/
 }
 
 /* Buttons */
@@ -286,9 +296,9 @@ select.form-control {
 	margin-top: 30px;
 }
 
-#edit-profile {
+/*#edit-profile {
 	margin-top: 135%;
-}
+}*/
 
 .mtop {
 	margin-top: 10px;
