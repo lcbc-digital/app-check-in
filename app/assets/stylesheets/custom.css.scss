@@ -179,6 +179,10 @@ aside {
 }
 
 /* forms */
+form {
+	padding-bottom: 10px;
+}
+
 input, textarea, select, .uneditable-input {
 	border: 1px solid #bbb;
 	width: 100%;
@@ -272,10 +276,10 @@ select.form-control {
 /* Buttons */
 .form-button {
 	bottom: 3%;
-  position: absolute;
-  left: 0;
-  padding: 0 10px;
-  width: 100%;
+	position: absolute;
+	left: 0;
+	padding: 0 15px;
+	width: 100%;
 }
 
 #edit-profile {
@@ -401,4 +405,34 @@ fieldset[disabled] .btn-primary.active {
 .btn-primary .badge { 
   color: #4396C0; 
   background-color: #FFFFFF; 
+}
+
+/* Tables */
+#attendance-table {
+	border: 1px solid #808080;
+	margin-bottom: 10px;
+	.table-header {
+		background-color: #808080;
+		
+
+		ul li {
+			color: white;
+			font-weight: bold;
+		}
+	}
+
+	ul {
+		padding: 10px;
+		margin: 0;
+	}
+
+	ul li {
+		display: inline-block;
+		width: 13.9%;
+		list-style: none;
+	}
+
+	ul:nth-child(even) {
+		background-color: #DFDFDF;
+	}
 }

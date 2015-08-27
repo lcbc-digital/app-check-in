@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get    'attendance' =>'attendances#new'
+
   root                 'check_ins#new'#users#new'
   get    'signup'   => 'users#new'
   get    'login'    => 'sessions#new'

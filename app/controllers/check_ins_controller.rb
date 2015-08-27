@@ -11,7 +11,7 @@ class CheckInsController < ApplicationController
       flash[:success] = "Check-In Successful!"
       redirect_to root_url
 		else
-      render 'static_pages/home'
+      render 'check_ins/new'
     end
 	end
 

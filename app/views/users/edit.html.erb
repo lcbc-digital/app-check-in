@@ -25,5 +25,8 @@
 
 			<%= f.submit "Save changes", class: "btn btn-primary" %>
 		<% end %>
+
+		<%= button_to "Cancel", check_in_path, :id => "cancel",
+  			:class => "btn btn-default", :method => :get %>
 	</div>
 </div>
