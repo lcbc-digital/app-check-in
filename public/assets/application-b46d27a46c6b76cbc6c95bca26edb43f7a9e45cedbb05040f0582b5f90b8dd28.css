@@ -8077,13 +8077,24 @@ textarea {
   margin-bottom: 15px;
 }
 
+/* line 53, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+.alert {
+  min-height: 8%;
+  margin-bottom: 0;
+}
+/* line 56, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+.alert + .follow-alert {
+  height: 90%;
+  padding-top: 20px;
+}
+
 /* typography */
-/* line 54, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 63, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
-/* line 58, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 67, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
@@ -8091,7 +8102,7 @@ h1 {
   text-align: center;
 }
 
-/* line 65, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 74, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 h2 {
   font-size: 1.2em;
   letter-spacing: -1px;
@@ -8101,14 +8112,14 @@ h2 {
   color: #777777;
 }
 
-/* line 74, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 83, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
 
 /* header */
-/* line 80, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 89, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #logo {
   float: left;
   margin-right: 10px;
@@ -8119,45 +8130,45 @@ p {
   padding-top: 9px;
   font-weight: bold;
 }
-/* line 90, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 99, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #logo:hover {
   color: white;
   text-decoration: none;
 }
 
 /* footer */
-/* line 97, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 106, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777777;
 }
-/* line 103, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 112, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 footer a {
   color: #555555;
 }
-/* line 106, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 115, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 footer a:hover {
   color: #222222;
 }
-/* line 111, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 120, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 footer small {
   float: left;
 }
-/* line 115, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 124, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 footer ul {
   float: right;
   list-style: none;
 }
-/* line 119, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 128, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 footer ul li {
   float: left;
   margin-left: 15px;
 }
 
 /* miscellaneous */
-/* line 127, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 136, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .debug_dump {
   clear: both;
   float: left;
@@ -8169,27 +8180,27 @@ footer ul li {
 }
 
 /* sidebar */
-/* line 137, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 146, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 aside section.user_info {
   margin-top: 20px;
 }
-/* line 141, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 150, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 aside section {
   padding: 10px 0;
   margin-top: 20px;
 }
-/* line 144, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 153, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 aside section:first-child {
   border: 0;
   padding-top: 0;
 }
-/* line 148, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 157, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 aside section span {
   display: block;
   margin-bottom: 3px;
   line-height: 1;
 }
-/* line 153, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 162, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 aside section h1 {
   font-size: 1.4em;
   text-align: left;
@@ -8198,19 +8209,24 @@ aside section h1 {
   margin-top: 0px;
 }
 
-/* line 163, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 172, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .gravatar {
   float: left;
   margin-right: 10px;
 }
 
-/* line 168, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 177, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .gravatar_edit {
   margin-top: 15px;
 }
 
 /* forms */
-/* line 173, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 182, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+form {
+  padding-bottom: 10px;
+}
+
+/* line 186, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -8220,57 +8236,57 @@ input, textarea, select, .uneditable-input {
   box-sizing: border-box;
 }
 
-/* line 180, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 193, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 label {
   text-transform: uppercase;
   font-weight: lighter;
   font-size: 0.8em;
 }
 
-/* line 186, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 199, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 input {
   height: auto !important;
 }
 
-/* line 190, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 203, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #new_user {
   margin-bottom: 10px;
 }
 
-/* line 194, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 207, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #error_explanation {
   color: red;
 }
-/* line 196, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 209, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #error_explanation ul {
   color: red;
   margin: 0 0 30px 0;
 }
 
-/* line 204, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 217, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .field_with_errors .form-control {
   color: #a94442;
 }
 
-/* line 209, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 222, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .checkbox {
   margin-top: -10px;
   margin-bottom: 10px;
 }
-/* line 212, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 225, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .checkbox span {
   margin-left: 20px;
   font-weight: normal;
 }
 
-/* line 218, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 231, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #session_remember_me {
   width: auto;
   margin-left: 0;
 }
 
 /* select */
-/* line 224, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 237, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 select.form-control {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -8282,17 +8298,18 @@ select.form-control {
   letter-spacing: 1px;
 }
 
-/* line 236, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 249, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #check_in_campus-button.ui-selectmenu-button {
   margin-bottom: 20px;
   border-radius: 2px;
   border-color: #4396C0;
+  /*z-index: 5;*/
 }
-/* line 241, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 255, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #check_in_campus-button.ui-selectmenu-button .ui-icon-triangle-1-s {
   display: none;
 }
-/* line 244, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 258, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #check_in_campus-button.ui-selectmenu-button span.ui-selectmenu-text {
   text-align: center;
   background-color: #4396C0;
@@ -8305,33 +8322,33 @@ select.form-control {
   text-transform: uppercase;
 }
 
-/* line 257, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 271, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #submit-check-in {
   position: relative;
-  z-index: 10;
+  /*z-index: 10;*/
 }
 
 /* Buttons */
-/* line 263, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 277, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .form-button {
   bottom: 3%;
   position: absolute;
   left: 0;
-  padding: 0 10px;
+  padding: 0 15px;
   width: 100%;
 }
 
-/* line 271, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 285, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #edit-profile {
   margin-top: 20px;
 }
 
-/* line 275, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 289, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #login_link {
   margin-bottom: 15px;
 }
 
-/* line 279, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 293, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .login_link {
   text-align: center;
   text-transform: uppercase;
@@ -8342,17 +8359,15 @@ select.form-control {
   margin-top: 30px;
 }
 
-/* line 289, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
-#edit-profile {
-  margin-top: 135%;
-}
-
-/* line 293, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/*#edit-profile {
+	margin-top: 135%;
+}*/
+/* line 307, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .mtop {
   margin-top: 10px;
 }
 
-/* line 297, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 311, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn {
   text-transform: uppercase;
   letter-spacing: 6px;
@@ -8360,14 +8375,14 @@ select.form-control {
   border-radius: 2px;
 }
 
-/* line 304, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 318, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn-default {
   color: #FFFFFF;
   background-color: #4A4D4D;
   border-color: #000000;
 }
 
-/* line 310, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 324, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn-default:hover,
 .btn-default:focus,
 .btn-default:active,
@@ -8378,14 +8393,14 @@ select.form-control {
   border-color: #000000;
 }
 
-/* line 320, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 334, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn-default:active,
 .btn-default.active,
 .open .dropdown-toggle.btn-default {
   background-image: none;
 }
 
-/* line 326, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 340, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn-default.disabled,
 .btn-default[disabled],
 fieldset[disabled] .btn-default,
@@ -8405,20 +8420,20 @@ fieldset[disabled] .btn-default.active {
   border-color: #000000;
 }
 
-/* line 345, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 359, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn-default .badge {
   color: #4A4D4D;
   background-color: #FFFFFF;
 }
 
-/* line 350, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 364, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn-primary {
   color: #FFFFFF;
   background-color: #4396C0;
   border-color: #4396C0;
 }
 
-/* line 356, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 370, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
@@ -8429,14 +8444,14 @@ fieldset[disabled] .btn-default.active {
   border-color: #4396C0;
 }
 
-/* line 366, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 380, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   background-image: none;
 }
 
-/* line 372, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 386, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn-primary.disabled,
 .btn-primary[disabled],
 fieldset[disabled] .btn-primary,
@@ -8456,10 +8471,41 @@ fieldset[disabled] .btn-primary.active {
   border-color: #4396C0;
 }
 
-/* line 391, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 405, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn-primary .badge {
   color: #4396C0;
   background-color: #FFFFFF;
+}
+
+/* Tables */
+/* line 411, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+#attendance-table {
+  border: 1px solid #808080;
+  margin-bottom: 10px;
+}
+/* line 414, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+#attendance-table .table-header {
+  background-color: #808080;
+}
+/* line 418, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+#attendance-table .table-header ul li {
+  color: white;
+  font-weight: bold;
+}
+/* line 424, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+#attendance-table ul {
+  padding: 10px;
+  margin: 0;
+}
+/* line 429, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+#attendance-table ul li {
+  display: inline-block;
+  width: 13.9%;
+  list-style: none;
+}
+/* line 435, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+#attendance-table ul:nth-child(even) {
+  background-color: #DFDFDF;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

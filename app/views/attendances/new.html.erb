@@ -6,31 +6,30 @@
 								{ :class => "form-control selectmenu" }
 								) %>
 
-<div class="row">
-	<div id="attendance-table" class="">
-		<div class="table-header">
-			<ul class="header">
-				<li id="name">Name</li>
-				<li id="email">Email</li>
-				<li id="address">Address</li>
-				<li id="dob">DOB</li>
-				<li id="campus">Campus</li>
-				<li id="time">Time of Check-In</li>
-				<li id="date">Date of Check-In</li>
+
+<div id="attendance-table" class="">
+	<div class="table-header">
+		<ul class="header">
+			<li id="name">Name</li>
+			<li id="email">Email</li>
+			<li id="address">Address</li>
+			<li id="dob">DOB</li>
+			<li id="campus">Campus</li>
+			<li id="time">Time of Check-In</li>
+			<li id="date">Date of Check-In</li>
+		</ul>
+	</div>
+	<div class="">
+		<% @checkins.each do |checkin| %>
+			<ul>
+				<li><%= checkin.user.name %></li>
+				<li><%= checkin.user.email %></li>
+				<li><%= checkin.user.address %></li>
+				<li><%= checkin.user.date_of_birth.strftime("%m/%d/%Y")%></li>
+				<li><%= checkin.campus%></li>
+				<li><%= checkin.updated_at.strftime("%I:%M %p")%></li>
+				<li><%= checkin.updated_at.strftime("%m/%d/%Y")%></li>
 			</ul>
-		</div>
-		<div class="">
-			<% @checkins.each do |checkin| %>
-				<ul>
-					<li><%= checkin.user.name %></li>
-					<li><%= checkin.user.email %></li>
-					<li><%= checkin.user.address %></li>
-					<li><%= checkin.user.date_of_birth.strftime("%m/%d/%Y")%></li>
-					<li><%= checkin.campus%></li>
-					<li><%= checkin.updated_at.strftime("%I:%M %p")%></li>
-					<li><%= checkin.updated_at.strftime("%m/%d/%Y")%></li>
-				</ul>
-			<% end %>
-		</div>
+		<% end %>
 	</div>
 </div>
