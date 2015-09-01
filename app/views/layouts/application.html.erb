@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= render 'layouts/shim' %>
+  <%= render partial: "analytics/google_analytics" %>
 </head>
 <body>
 	<div class="container">
@@ -19,5 +20,7 @@
 
 		<%= debug(params) if Rails.env.development? %>
 	</div>
+
+	<%= render partial: "analytics/google_analytics_pageview" if Rails.env.production? %>
 </body>
 </html>
