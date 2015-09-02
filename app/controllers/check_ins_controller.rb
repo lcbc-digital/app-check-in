@@ -8,12 +8,16 @@ class CheckInsController < ApplicationController
   def create
     @check_in = current_user.check_ins.build(check_in_params)
     if @check_in.save
-      flash[:success] = "Check-In Successful!"
-      redirect_to root_url
+      #flash[:success] = "Check-In Successful!"
+      redirect_to confirmation_path#render 'thanks'#redirect_to root_url
 		else
+      flash[:warning] = "Sorry, something went wrong. Please try again."
       render 'check_ins/new'
     end
 	end
+
+  def confirmation
+  end
 
 	private
     def check_in_params

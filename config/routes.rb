@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
 
 
-  get    'attendance' =>'attendances#new'
+  get    'attendance'   => 'attendances#new'
 
-  root                 'check_ins#new'#users#new'
-  get    'signup'   => 'users#new'
-  get    'login'    => 'sessions#new'
-  get    'check-in' => 'check_ins#new'
-  post   'check-in' => 'check_ins#create'
-  post   'login'    => 'sessions#create'
-  delete 'logout'   => 'sessions#destroy'
+  root                     'check_ins#new'#users#new'
+  get    'signup'       => 'users#new'
+  get    'login'        => 'sessions#new'
+  get    'confirmation' => 'check_ins#confirmation'
+  get    'check-in'     => 'check_ins#new'
+  post   'check-in'     => 'check_ins#create'
+  post   'login'        => 'sessions#create'
+  delete 'logout'       => 'sessions#destroy'
   resources :users
   resources :check_ins, only: [:new, :create]
 
