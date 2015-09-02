@@ -30,7 +30,7 @@
 				<li><%= checkin.user.date_of_birth.strftime("%m/%d/%Y")%></li>
 				<li><%= checkin.campus%></li>
 				<li><%= checkin.updated_at.in_time_zone('Eastern Time (US & Canada)').strftime("%I:%M %p %Z")%></li>
-				<li><%= checkin.updated_at.strftime("%m/%d/%Y")%></li>
+				<li><%= checkin.updated_at.in_time_zone('Eastern Time (US & Canada)').strftime("%m/%d/%Y")%></li>
 			</ul>
 		<% end %>
 	</div>
