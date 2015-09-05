@@ -27,7 +27,7 @@
 				<li><%= checkin.user.name %></li>
 				<li class="email"><%= checkin.user.email %></li>
 				<li class="address"><%= checkin.user.address %></li>
-				<li class="date_of_birth"><%= checkin.user.date_of_birth.strftime("%m/%d/%Y")%></li>
+				<li class="date_of_birth"><%= checkin.user.try(:date_of_birth).try(:strftime, "%m/%d/%Y")%></li>
 				<li class="campus"><%= checkin.campus%></li>
 				<li><%= checkin.updated_at.in_time_zone('Eastern Time (US & Canada)').strftime("%I:%M %p %Z")%></li>
 				<li><%= checkin.updated_at.in_time_zone('Eastern Time (US & Canada)').strftime("%m/%d/%Y")%></li>
