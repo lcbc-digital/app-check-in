@@ -183,6 +183,12 @@ aside {
 	font-weight: lighter;
 }
 
+.confirmation-message {
+	text-align: center;
+	font-weight: lighter;
+	letter-spacing: 1px;
+}
+
 /* forms */
 form {
 	padding-bottom: 10px;
@@ -435,6 +441,18 @@ fieldset[disabled] .btn-primary.active {
 		display: inline-block;
 		width: 13.9%;
 		list-style: none;
+	}
+
+	ul li.campus, ul li.date_of_birth {
+		width: 7%;
+	}
+
+	ul li.email {
+		width: 20.9%;
+	}
+
+	ul li.address {
+		width: 20.7%;
 	}
 
 	ul:nth-child(even) {

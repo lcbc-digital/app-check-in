@@ -13,10 +13,10 @@
 	<div class="table-header">
 		<ul class="header">
 			<li id="name">Name</li>
-			<li id="email">Email</li>
-			<li id="address">Address</li>
-			<li id="dob">DOB</li>
-			<li id="campus">Campus</li>
+			<li id="email" class="email">Email</li>
+			<li id="address" class="address">Address</li>
+			<li id="dob" class="date_of_birth">DOB</li>
+			<li id="campus" class="campus">Campus</li>
 			<li id="time">Time of Check-In</li>
 			<li id="date">Date of Check-In</li>
 		</ul>
@@ -25,10 +25,10 @@
 		<% @checkins.each do |checkin| %>
 			<ul>
 				<li><%= checkin.user.name %></li>
-				<li><%= checkin.user.email %></li>
-				<li><%= checkin.user.address %></li>
-				<li><%= checkin.user.date_of_birth.strftime("%m/%d/%Y")%></li>
-				<li><%= checkin.campus%></li>
+				<li class="email"><%= checkin.user.email %></li>
+				<li class="address"><%= checkin.user.address %></li>
+				<li class="date_of_birth"><%= checkin.user.date_of_birth.strftime("%m/%d/%Y")%></li>
+				<li class="campus"><%= checkin.campus%></li>
 				<li><%= checkin.updated_at.in_time_zone('Eastern Time (US & Canada)').strftime("%I:%M %p %Z")%></li>
 				<li><%= checkin.updated_at.in_time_zone('Eastern Time (US & Canada)').strftime("%m/%d/%Y")%></li>
 			</ul>
