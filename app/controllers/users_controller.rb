@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   	@user = User.new(user_params)
   	if @user.save
     	log_in @user
+    	remember @user
   		flash[:success] = "Success! You can now check-in."
   		redirect_to check_in_path # Handle a successful save.
   	else
