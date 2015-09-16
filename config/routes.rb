@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   post   'login'        => 'sessions#create'
   delete 'logout'       => 'sessions#destroy'
   resources :users
-  resources :check_ins, only: [:new, :create]
+  resources :password_resets, only: [:new, :create, :edit, :update]
+  resources :check_ins,       only: [:new, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
