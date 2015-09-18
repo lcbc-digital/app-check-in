@@ -2,7 +2,7 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-  	<p class="info-message">Reset Password</p>
+  	<p class="info-message">Enter Your New Password</p>
     <%= form_for(@user, url: password_reset_path(params[:id])) do |f| %>
       <%= render 'shared/error_messages' %>
 
