@@ -180,7 +180,26 @@ aside {
 
 .info-message {
 	text-align: center;
-	font-weight: lighter;
+	/*font-weight: lighter;*/
+}
+
+.signup-message-top {
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 0px;
+	line-height: 1.2em;
+}
+
+.signup-message-top2 {
+	text-align:center;
+	margin-bottom: 15px;
+	line-height: 1.2em;
+}
+
+.signup-message-note {
+	text-align: center;
+	font-weight: 300;
+	line-height: 1.2em;
 }
 
 .confirmation-message {
