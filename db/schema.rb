@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150824005752) do
+ActiveRecord::Schema.define(version: 20150917220930) do
 
   create_table "check_ins", force: :cascade do |t|
     t.string   "campus"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 20150824005752) do
     t.string   "remember_digest"
     t.date     "date_of_birth"
     t.string   "address"
+    t.string   "reset_digest"
+    t.datetime "reset_sent_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
