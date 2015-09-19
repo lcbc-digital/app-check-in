@@ -8223,16 +8223,51 @@ aside section h1 {
 /* line 181, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .info-message {
   text-align: center;
-  font-weight: lighter;
+  /*font-weight: 300;*/
+}
+
+/* line 186, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+.reset-password-message {
+  line-height: 1.2em;
+  text-align: center;
+}
+
+/* line 191, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+.signup-message-top {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0px;
+  line-height: 1.2em;
+}
+
+/* line 198, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+.signup-message-top2 {
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.2em;
+}
+
+/* line 204, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+.signup-message-note {
+  text-align: center;
+  font-weight: 300;
+  line-height: 1.2em;
+}
+
+/* line 210, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+.confirmation-message {
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 1px;
 }
 
 /* forms */
-/* line 187, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 217, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 form {
   padding-bottom: 10px;
 }
 
-/* line 191, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 221, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -8242,57 +8277,57 @@ input, textarea, select, .uneditable-input {
   box-sizing: border-box;
 }
 
-/* line 198, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 228, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 label {
   text-transform: uppercase;
-  font-weight: lighter;
+  font-weight: 300;
   font-size: 0.8em;
 }
 
-/* line 204, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 234, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 input {
   height: auto !important;
 }
 
-/* line 208, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 238, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #new_user {
   margin-bottom: 10px;
 }
 
-/* line 212, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 242, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #error_explanation {
   color: red;
 }
-/* line 214, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 244, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #error_explanation ul {
   color: red;
   margin: 0 0 30px 0;
 }
 
-/* line 222, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 252, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .field_with_errors .form-control {
   color: #a94442;
 }
 
-/* line 227, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 257, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .checkbox {
   margin-top: -10px;
   margin-bottom: 10px;
 }
-/* line 230, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 260, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .checkbox span {
   margin-left: 20px;
   font-weight: normal;
 }
 
-/* line 236, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 266, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #session_remember_me {
   width: auto;
   margin-left: 0;
 }
 
 /* select */
-/* line 242, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 272, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 select.form-control {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -8300,27 +8335,27 @@ select.form-control {
   background-color: #4396C0;
   color: white;
   border-color: #4396C0;
-  font-weight: lighter;
+  font-weight: 300;
   letter-spacing: 1px;
 }
 
-/* line 254, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 284, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #check_in_campus-button.ui-selectmenu-button {
   margin-bottom: 20px;
   border-radius: 2px;
   border-color: #4396C0;
   /*z-index: 5;*/
 }
-/* line 260, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 290, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #check_in_campus-button.ui-selectmenu-button .ui-icon-triangle-1-s {
   display: none;
 }
-/* line 263, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 293, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #check_in_campus-button.ui-selectmenu-button span.ui-selectmenu-text {
   text-align: center;
   background-color: #4396C0;
   color: white;
-  font-weight: lighter;
+  font-weight: 300;
   letter-spacing: 4px;
   padding-left: 0;
   padding-right: 0;
@@ -8328,14 +8363,14 @@ select.form-control {
   text-transform: uppercase;
 }
 
-/* line 276, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 306, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #submit-check-in {
   position: relative;
   /*z-index: 10;*/
 }
 
 /* Buttons */
-/* line 282, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 312, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .form-button {
   bottom: 3%;
   position: absolute;
@@ -8344,22 +8379,22 @@ select.form-control {
   width: 100%;
 }
 
-/* line 290, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 320, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #edit-profile {
   margin-top: 20px;
 }
 
-/* line 294, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 324, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #login_link {
   margin-bottom: 15px;
 }
 
-/* line 298, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 328, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .login_link {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 4px;
-  font-weight: lighter;
+  font-weight: 300;
   font-size: 0.7em;
   display: block;
   margin-top: 30px;
@@ -8368,27 +8403,27 @@ select.form-control {
 /*#edit-profile {
 	margin-top: 135%;
 }*/
-/* line 312, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 342, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .mtop {
   margin-top: 10px;
 }
 
-/* line 316, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 346, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn {
   text-transform: uppercase;
   letter-spacing: 6px;
-  font-weight: lighter;
+  font-weight: 300;
   border-radius: 2px;
 }
 
-/* line 323, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 353, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn-default {
   color: #FFFFFF;
   background-color: #4A4D4D;
   border-color: #000000;
 }
 
-/* line 329, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 359, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn-default:hover,
 .btn-default:focus,
 .btn-default:active,
@@ -8399,14 +8434,14 @@ select.form-control {
   border-color: #000000;
 }
 
-/* line 339, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 369, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn-default:active,
 .btn-default.active,
 .open .dropdown-toggle.btn-default {
   background-image: none;
 }
 
-/* line 345, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 375, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn-default.disabled,
 .btn-default[disabled],
 fieldset[disabled] .btn-default,
@@ -8426,20 +8461,20 @@ fieldset[disabled] .btn-default.active {
   border-color: #000000;
 }
 
-/* line 364, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 394, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn-default .badge {
   color: #4A4D4D;
   background-color: #FFFFFF;
 }
 
-/* line 369, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 399, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn-primary {
   color: #FFFFFF;
   background-color: #4396C0;
   border-color: #4396C0;
 }
 
-/* line 375, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 405, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
@@ -8450,14 +8485,14 @@ fieldset[disabled] .btn-default.active {
   border-color: #4396C0;
 }
 
-/* line 385, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 415, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   background-image: none;
 }
 
-/* line 391, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 421, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn-primary.disabled,
 .btn-primary[disabled],
 fieldset[disabled] .btn-primary,
@@ -8477,40 +8512,65 @@ fieldset[disabled] .btn-primary.active {
   border-color: #4396C0;
 }
 
-/* line 410, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 440, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 .btn-primary .badge {
   color: #4396C0;
   background-color: #FFFFFF;
 }
 
 /* Tables */
-/* line 416, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 446, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #attendance-table {
   border: 1px solid #808080;
   margin-bottom: 10px;
+  width: 100%;
+  /*ul {*/
+  /*ul li {*/
+  /*ul li.campus, ul li.date_of_birth {*/
+  /*ul li.email {*/
+  /*ul li.address {*/
+  /*ul:nth-child(even) {*/
 }
-/* line 419, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+/* line 450, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
 #attendance-table .table-header {
   background-color: #808080;
+  /*ul li {*/
 }
-/* line 423, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
-#attendance-table .table-header ul li {
+/* line 455, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+#attendance-table .table-header tr th {
   color: white;
   font-weight: bold;
 }
-/* line 429, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
-#attendance-table ul {
+/* line 462, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+#attendance-table td, #attendance-table th {
   padding: 10px;
   margin: 0;
 }
-/* line 434, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
-#attendance-table ul li {
+/* line 467, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+#attendance-table td:first-child, #attendance-table th:first-child {
+  padding-left: 10px;
+  padding-right: 0;
+}
+/* line 473, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+#attendance-table tr td, #attendance-table tr th {
   display: inline-block;
   width: 13.9%;
   list-style: none;
 }
-/* line 440, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
-#attendance-table ul:nth-child(even) {
+/* line 480, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+#attendance-table tr td.campus, #attendance-table tr th.campus, #attendance-table tr td.date_of_birth, #attendance-table tr th.date_of_birth {
+  width: 7%;
+}
+/* line 485, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+#attendance-table tr td.email, #attendance-table tr th.email {
+  width: 20.9%;
+}
+/* line 490, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+#attendance-table tr td.address, #attendance-table tr th.address {
+  width: 20.7%;
+}
+/* line 495, /Users/jeveland91/workspace/lcbc_check-in/app/assets/stylesheets/custom.css.scss */
+#attendance-table tr:nth-child(even) {
   background-color: #DFDFDF;
 }
 /*

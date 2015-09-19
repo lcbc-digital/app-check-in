@@ -446,40 +446,53 @@ fieldset[disabled] .btn-primary.active {
 #attendance-table {
 	border: 1px solid #808080;
 	margin-bottom: 10px;
+	width: 100%;
 	.table-header {
 		background-color: #808080;
 		
 
-		ul li {
+		/*ul li {*/
+		tr th {
 			color: white;
 			font-weight: bold;
 		}
 	}
 
-	ul {
+	/*ul {*/
+	td, th {
 		padding: 10px;
 		margin: 0;
 	}
 
-	ul li {
+	td:first-child, th:first-child {
+	  padding-left:10px;
+	  padding-right:0;
+	}
+
+	/*ul li {*/
+	tr td, tr th {
 		display: inline-block;
 		width: 13.9%;
 		list-style: none;
 	}
 
-	ul li.campus, ul li.date_of_birth {
+	/*ul li.campus, ul li.date_of_birth {*/
+	tr td.campus, tr th.campus, tr td.date_of_birth, tr th.date_of_birth {
 		width: 7%;
 	}
 
-	ul li.email {
+	/*ul li.email {*/
+	tr td.email, tr th.email {
 		width: 20.9%;
 	}
 
-	ul li.address {
+	/*ul li.address {*/
+	tr td.address, tr th.address {
 		width: 20.7%;
 	}
 
-	ul:nth-child(even) {
+	/*ul:nth-child(even) {*/
+	tr:nth-child(even) {
 		background-color: #DFDFDF;
 	}
 }
