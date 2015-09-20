@@ -17,8 +17,8 @@
 
 <hr/>
 
-<p>Users with remember_token: <%= User.where(remember_digest: nil).count%></p>
-<p>Users without remember_token: <%= User.where.not(remember_digest: nil).count%></p>
+<p>Users with remember_token: <%= User.where.not(remember_digest: nil).count%></p>
+<p>Users without remember_token: <%= User.where(remember_digest: nil).count%></p>
 
 <table id="attendance-table" class="">
 	<thead class="table-header">
