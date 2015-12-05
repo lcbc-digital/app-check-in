@@ -2,11 +2,12 @@
 
 <h1>Mobile Check-In Attendance</h1>
 
-<%= select(:check_in, :campus, [['1','1 Day'],
-								['2','2 Days']],
-								{prompt: 'Select Days'},
-								{ :class => "form-control hide" }
-								) %>
+<%= select(:check_in, :campus, [
+	['1','1 Day'],
+	['2','2 Days']],
+	{prompt: 'Select Days'},
+	{ :class => "form-control hide" }
+	) %>
 <h2 style="text-align: left; margin-bottom: 10px; color: black">Campus Totals</h2>
 <% (CheckIn.group(:campus).count).each do |campus| %>
 	<p> <%= campus[0] %> : <%= campus[1] %> </p>
