@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "2.3.1"
 =begin
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -44,7 +44,7 @@ group :development, :test do
 end
 =end
 
-gem 'rails',					'4.2.2'
+gem 'rails',					'4.2.6'
 gem 'bcrypt',         '3.1.7'
 gem 'bootstrap-sass', '3.2.0.0'
 gem 'sass-rails', 		'5.0.2'
@@ -60,7 +60,7 @@ group :development, :test do
 	gem 'sqlite3',			'1.3.9'
 	gem 'byebug', 			'3.4.0'
 	gem 'web-console',	'2.0.0.beta3'
-	gem 'spring', 			'1.1.3'
+	gem 'spring', 			'1.6.4'
 end
 
 group :test do
