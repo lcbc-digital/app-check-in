@@ -5,12 +5,14 @@
 		<%= form_for(@check_in) do |f| %>
 			
 			<%= select(:check_in, :campus, [
-				['BranchCreek','BRC'],
 				['Berks','BRK'],
+				['BranchCreek','BRC'],
 				['Columbia-Montour','CLM'],
-				['Ephrata','EPH'], ['Harrisburg','HBG'],
+				['Ephrata','EPH'], 
+				['Harrisburg','HBG'],
 				['Lancaster City','CTY'],
 				['Manheim','MNH'],
+				['Waynesboro', 'WYN'],
 				['York','YRK']],
 				{prompt: 'Select Campus'},
 				{ :class => "form-control"}
