@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      flash[:success] = "Success - profile updated."
+      flash[:success] = "Profile updated successfully."
       redirect_to check_in_path
     else
       render 'edit'

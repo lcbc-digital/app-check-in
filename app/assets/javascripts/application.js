@@ -11,12 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= bootstrap
-//= require jquery-ui/selectmenu
+//= require framework7
 //= require turbolinks
 //= require_tree .
-
-$(function() {
-  $('.selectmenu').selectmenu();
-});

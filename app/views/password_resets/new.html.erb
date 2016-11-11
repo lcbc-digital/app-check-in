@@ -1,16 +1,28 @@
 <% provide(:title, "Forgot Password") %>
+<%= form_for(:password_reset, url: password_resets_path) do |f| %>
+  <div class="content-block-title">Enter email to reset your password</div>
+  <div class="list-block">
+    <ul>
+      <!-- Text inputs -->
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div class="item-title label"><%= f.label :email %></div>
+            <div class="item-input">
+              <%= f.email_field :email, placeholder: 'you@example.com' %>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="content-block">
+      <p><%= f.submit "Submit", class: "button button-big active" %></p>
+    </div>
+  </div>
+<% end %>
 
-<div class="row follow-alert">
-  <div class="col-md-6 col-md-offset-3">
-  	<p class="reset-password-message">Enter account email to reset your password</p>
-		<%= form_for(:password_reset, url: password_resets_path) do |f| %>
-			<%= f.label :email %>
-			<%= f.email_field :email, class: 'form-control' %>
-
-			<%= f.submit "Submit", class: "btn btn-primary" %>
-		<% end %>
-
-		<%= button_to "Cancel", login_path, :id => "cancel", form_class: "form-button",
-      :class => "btn btn-default", :method => :get %>
-	</div>
+<div class="content-block">
+  <%= button_to "Cancel", login_path, :id => "cancel", form_class: "form-button", :class => "button button-big color-blue", :method => :get %>
 </div>
+
+
