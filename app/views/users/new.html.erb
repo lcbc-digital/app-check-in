@@ -1,40 +1,92 @@
 <% provide(:title, 'Sign up') %>
+<%= form_for(@user) do |f| %>
+  <%= render 'shared/error_messages'%>
 
-<div class="row">
-	<div class="col-md-6 col-md-offset-3">
-		<p class="signup-message-top">First time using check-in on the new LCBC app?</p>
-		<p class="signup-message-top2">Create a new account and enable simple check-in by filling out the form below.</p>
+<!--   <div class="content-block">
+    <div class="content-block-inner">
+      <h3>First time using the LCBC app?</h3>
+      <p>Create a new account and enable simple check-in by filling out the form below.</p>
+      <p><strong>Note:</strong> If you already have a myLCBC or online giving account, you still need to create an account to enable check-in on the LCBC app.</p>
+    </div>
+  </div> -->
 
-		<p class="signup-message-note">
-			(Note: If you already have a myLCBC or online giving account, you still need to create a new account to enable check-in on the new LCBC app)
-		</p>
+  <div class="content-block-title">Sign Up</div>
+  <div class="list-block">
+    <ul>
+      <!-- Text inputs -->
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div class="item-title label"><%= f.label :name %></div>
+            <div class="item-input">
+              <%= f.text_field :name, placeholder: 'Your Name' %>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div class="item-title label"><%= f.label :email %></div>
+            <div class="item-input">
+              <%= f.email_field :email, placeholder: 'you@example.com' %>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div class="item-title label"><%= f.label :address %></div>
+            <div class="item-input">
+              <%= f.text_field :address, placeholder: 'Street, City, State, Zip' %>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- Date -->
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div class="item-title label"><%= f.label :date_of_birth %></div>
+            <div class="item-input">
+              <%= f.date_field :date_of_birth, placeholder: 'Birthday' %>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div class="item-title label"><%= f.label :password %></div>
+            <div class="item-input">
+              <%= f.password_field :password, placeholder: '*********' %>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div class="item-title label"><%= f.label :password_confirmation, "Confirmation" %></div>
+            <div class="item-input">
+              <%= f.password_field :password_confirmation, placeholder: '*********' %>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
 
-		<%= form_for(@user) do |f| %>
-			<%= render 'shared/error_messages'%>
+  <div class="content-block">
+    <p><%= button_to "Sign Up", login_path, :id => "login_link", :class => "button button-big active", :method => :get %></p>
+  </div>
+<% end %>
 
-			<%= f.label :name %>
-			<%= f.text_field :name, class: 'form-control' %>
-
-			<%= f.label :email %>
-			<%= f.email_field :email, class: 'form-control' %>
-
-			<%= f.label :address %>
-			<%= f.text_field :address, class: 'form-control' %>
-
-			<%= f.label :date_of_birth %>
-			<%= f.date_field :date_of_birth, class: 'form-control' %>
-
-			<%= f.label :password %>
-			<%= f.password_field :password, class: 'form-control' %>
-
-			<%= f.label :password_confirmation, "Confirm Password" %>
-			<%= f.password_field :password_confirmation, class: 'form-control' %>
-			
-			<%= f.submit "SUBMIT", class: "btn btn-primary" %>
-		<% end %>
-
-		<%= label_tag "login_link", "Already Have An Account?", class: 'login_link' %>
-		<%= button_to "Log-In", login_path, :id => "login_link",
-      :class => "btn btn-default btn-login", :method => :get %>
-	</div>
+<div class="list-block inset">
+  <ul>
+    <li>
+      <%= link_to "Already Have An Account?", "login", class: 'item-link list-button', data: { turbolinks: 'false' } %>
+    </li>
+  </ul>
 </div>

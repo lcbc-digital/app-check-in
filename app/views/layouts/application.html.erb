@@ -2,24 +2,61 @@
 <html>
 <head>
   <title><%= full_title(yield(:title)) %></title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= render 'layouts/shim' %>
   <%= render partial: "analytics/google_analytics" %>
+  <%= javascript_include_tag 'framework7.js' %>
+
+  <% # This script determines if the end-user is on an iOS or Android device
+     # and loads the native theme accordingly. %>
+  <script>
+    (function () {
+      if (Framework7.prototype.device.android) {
+        Dom7('head').append(
+          '<%= stylesheet_link_tag 'framework7.material.css' %>' +
+          '<%= stylesheet_link_tag 'framework7.material.colors.css' %>' +
+          '<%= stylesheet_link_tag 'app.material.css' %>'
+          );
+      }
+      else {
+        Dom7('head').append(
+          '<%= stylesheet_link_tag 'framework7.ios.css' %>' +
+          '<%= stylesheet_link_tag 'framework7.ios.colors.css' %>' +
+          '<%= stylesheet_link_tag 'app.ios.css' %>'
+          );
+      }
+    })();
+  </script>
 </head>
-<body>
-	<div class="container">
-		<% flash.each do |message_type, message| %>
-			<%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-			<!-- <div class="alert alert-<%= message_type %>"><%= message %></div> -->
-		<% end %>
+<body class="theme-lightblue">
 
-		<%= yield %>
+<div class="statusbar-overlay"></div>
 
-		<%= debug(params) if Rails.env.development? %>
-	</div>
+  <div class="views">
+    <div class="view view-main">
+      <div class="pages">
+        <div data-page="index" class="page">
+          <div class="page-content">
+            <% flash.each do |message_type, message| %>
+              <div class="card">
+                <div class="card-content">
+                  <div class="card-content-inner <%= message_type %>"><%= message %></div>
+                </div>
+              </div>
+            <% end %>
+
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= debug(params) if Rails.env.development? %>
+
+  <%= javascript_include_tag 'application' %>
 
 	<%= render partial: "analytics/google_analytics_pageview" if Rails.env.production? %>
 </body>

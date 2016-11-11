@@ -1,32 +1,78 @@
 <% provide(:title, "Edit user") %>
+<div class="page" data-page="editProfile">
+  <%= form_for(@user) do |f| %>
+    <%= render 'shared/error_messages' %>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-		<%= form_for(@user) do |f| %>
-			<%= render 'shared/error_messages' %>
-			
-			<%= f.label :name %>
-			<%= f.text_field :name, class: 'form-control' %>
-
-			<%= f.label :email %>
-			<%= f.email_field :email, class: 'form-control' %>
-
-			<%= f.label :address %>
-			<%= f.text_field :address, class: 'form-control' %>
-
-			<%= f.label :date_of_birth %>
-			<%= f.date_field :date_of_birth, class: 'form-control' %>
-
-			<%= f.label :password %>
-			<%= f.password_field :password, class: 'form-control' %>
-
-			<%= f.label :password_confirmation, "Confirmation" %>
-			<%= f.password_field :password_confirmation, class: 'form-control' %>
-
-			<%= f.submit "Save changes", class: "btn btn-primary" %>
-		<% end %>
-
-		<%= button_to "Cancel", check_in_path, :id => "cancel",
-  			:class => "btn btn-default", :method => :get %>
-	</div>
+    <div class="content-block-title">Edit Profile</div>
+    <div class="list-block">
+      <ul>
+        <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title label"><%= f.label :name %></div>
+              <div class="item-input">
+                <%= f.text_field :name, placeholder: 'Your Name' %>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title label"><%= f.label :email %></div>
+              <div class="item-input">
+                <%= f.email_field :email, placeholder: 'you@example.com' %>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title label"><%= f.label :address %></div>
+              <div class="item-input">
+                <%= f.text_field :address, placeholder: 'Street, City, State, Zip' %>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title label"><%= f.label :date_of_birth %></div>
+              <div class="item-input">
+                <%= f.date_field :date_of_birth, placeholder: 'Birthday' %>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title label"><%= f.label :password %></div>
+              <div class="item-input">
+                <%= f.password_field :password, placeholder: '*********' %>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title label"><%= f.label :password_confirmation, "Confirmation" %></div>
+              <div class="item-input">
+                <%= f.password_field :password_confirmation, placeholder: '*********' %>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="content-block">
+      <p><%= f.submit "Save changes", class: "button button-big active" %></p>
+    </div>
+  <% end %>
+  <div class="content-block">
+    <p><%= button_to "Cancel", check_in_path, :id => "cancel", :class => "button button-big color-lightblue", :method => :get %></p>
+  </div>
 </div>

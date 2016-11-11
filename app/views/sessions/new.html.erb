@@ -1,21 +1,43 @@
 <% provide(:title, "Log in") %>
+<%= form_for(:session, url: login_path) do |f| %>
+  <div class="content-block-title">Log In</div>
+  <div class="list-block">
+    <ul>
+      <!-- Text inputs -->
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div class="item-title label"><%= f.label :email %></div>
+            <div class="item-input">
+              <%= f.email_field :email, placeholder: 'you@example.com' %>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item-content">
+          <div class="item-inner">
+            <div class="item-title label"><%= f.label :password %></div>
+            <div class="item-input">
+              <%= f.password_field :password, placeholder: '********' %>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="content-block">
+    <p><%= f.submit "Log In", class: "button button-big active" %></p>
+  </div>
+<% end %>
 
-<div class="row follow-alert">
-  <div class="col-md-6 col-md-offset-3">
-		<%= form_for(:session, url: login_path) do |f| %>
-			<%= f.label :email %>
-			<%= f.email_field :email, class: 'form-control' %>
-
-			<%= f.label :password %>
-			<%= f.password_field :password, class: 'form-control' %>
-
-			<%= f.submit "Log-in", class: "btn btn-primary" %>
-		<% end %>
-		
-		<%= button_to "Forgot Password?", new_password_reset_path, :id => "forgot_password_link",
-      :class => "btn btn-default mtop", :method => :get %>
-		
-    <%= button_to "Create Profile", signup_path, :id => "create_profile_link", form_class: "form-button",
-      :class => "btn btn-default", :method => :get %>
-	</div>
+<div class="list-block inset">
+  <ul>
+    <li>
+      <%= link_to "Forgot Password?", new_password_reset_path, :id => "forgot_password_link", :class => "item-link list-button", :method => :get %>
+    </li>
+    <li>
+      <%= link_to "Don't Have an Account?", signup_path, :id => "create_profile_link", :class => "item-link list-button", :method => :get %>
+    </li>
+  </ul>
 </div>
