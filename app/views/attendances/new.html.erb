@@ -3,30 +3,29 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.2.0/milligram.min.css">
 
 <div class="container">
-  <h1>Mobile Check-In Attendance</h1>
+  <h2>Mobile Check-In Attendance</h2>
 
-  <%= select(:check_in, :campus, [
+  <%#= select(:check_in, :campus, [
     ['1','1 Day'],
     ['2','2 Days']],
     {prompt: 'Select Days'},
     { :class => "form-control hide" }
     ) %>
 
-  <h2>Campus Totals</h2>
+  <%#= link_to "Download CSV", attendances_export_path(format: "csv"), class: 'button' %>
 
   <ul>
+    <h4>Campus Totals</h4>
     <% (CheckIn.group(:campus).count).each do |campus| %>
       <li><%= campus[0] %> : <%= campus[1] %></li>
     <% end %>
     <li><strong>Total: <%= CheckIn.count %></strong></li>
-    <li>Users with remember_token: <%= User.where.not(remember_digest: nil).count%></li>
-    <li>Users without remember_token: <%= User.where(remember_digest: nil).count%></li>
+    <li>Users with <code>remember_token</code>: <%= User.where.not(remember_digest: nil).count%></li>
+    <li>Users without <code>remember_token</code>: <%= User.where(remember_digest: nil).count%></li>
   </ul>
 
 
-  <p><%= link_to "Download CSV", attendance_path(format: "csv"), target: "_blank" %></p>
-
-  <%# if false %>
+  <% if false %>
     <% # Hiding this for now due to potential privacy reasons. To download the records,
        # append `.csv` to the url (e.g. /attendance.csv) %>
     <table id="attendance-table" class="">
@@ -55,7 +54,7 @@
         <% end %>
       </tbody>
     </table>
-  <%# end %>
+  <% end %>
 
 </div>
 

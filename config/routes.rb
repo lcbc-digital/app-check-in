@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   post   'check-in'     => 'check_ins#create'
   post   'login'        => 'sessions#create'
   delete 'logout'       => 'sessions#destroy'
+  get    'export'       => 'attendances#export', as: :attendances_export
   resources :users
   resources :password_resets, only: [:new, :create, :edit, :update]
   resources :check_ins,       only: [:new, :create]
