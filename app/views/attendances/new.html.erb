@@ -2,8 +2,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.2.0/milligram.min.css">
 
-<div class="container">
-  <h2>Mobile Check-In Attendance</h2>
+<div class="container" style="padding: 80px 20px">
 
   <%#= select(:check_in, :campus, [
     ['1','1 Day'],
@@ -12,17 +11,50 @@
     { :class => "form-control hide" }
     ) %>
 
-  <%#= link_to "Download CSV", attendances_export_path(format: "csv"), class: 'button' %>
 
-  <ul>
-    <h4>Campus Totals</h4>
-    <% (CheckIn.group(:campus).count).each do |campus| %>
-      <li><%= campus[0] %> : <%= campus[1] %></li>
-    <% end %>
-    <li><strong>Total: <%= CheckIn.count %></strong></li>
-    <li>Users with <code>remember_token</code>: <%= User.where.not(remember_digest: nil).count%></li>
-    <li>Users without <code>remember_token</code>: <%= User.where(remember_digest: nil).count%></li>
-  </ul>
+    <h5>Campus Check-ins</h5>
+    <p><%= link_to "Right-click and 'Save link as...' to download CSV", attendance_path(format: "csv"), download: '' %></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Campus</th>
+          <th>Number of Check-ins</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% (CheckIn.group(:campus).count).each do |campus| %>
+          <tr>
+            <td><%= campus[0] %></td>
+            <td><%= campus[1] %></td>
+          </tr>
+        <% end %>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td><strong>Total</strong></td>
+          <td><strong><%= CheckIn.count %></strong></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <hr>
+
+    <h5>Remember Tokens</h5>
+    <table>
+      <thead>
+        <tr>
+          <th>Users with remember_token</th>
+          <th>Users without remember_token</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= User.where.not(remember_digest: nil).count %></td>
+          <td><%= User.where(remember_digest: nil).count %></td>
+        </tr>
+      </tbody>
+    </table>
+
 
 
   <% if false %>
