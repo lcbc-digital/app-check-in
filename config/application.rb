@@ -1,5 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
+require 'csv'
 require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
@@ -24,6 +25,8 @@ module LcbcCheckIn
     config.active_record.raise_in_transactional_callbacks = true
 
     # Serve static assets
-    config.serve_static_assets = true
+    config.serve_static_files = true
+
+
   end
 end

@@ -3,47 +3,51 @@
 <h1>Mobile Check-In Attendance</h1>
 
 <%= select(:check_in, :campus, [
-	['1','1 Day'],
-	['2','2 Days']],
-	{prompt: 'Select Days'},
-	{ :class => "form-control hide" }
-	) %>
-<h2 style="text-align: left; margin-bottom: 10px; color: black">Campus Totals</h2>
+  ['1','1 Day'],
+  ['2','2 Days']],
+  {prompt: 'Select Days'},
+  { :class => "form-control hide" }
+  ) %>
+
+<h2>Campus Totals</h2>
+
 <% (CheckIn.group(:campus).count).each do |campus| %>
-	<p> <%= campus[0] %> : <%= campus[1] %> </p>
-	
+  <p><%= campus[0] %> : <%= campus[1] %></p>
 <% end %>
 
-<p> Total: <%= CheckIn.count %> </p>
-
-<hr/>
-
+<p>Total: <%= CheckIn.count %> </p>
 <p>Users with remember_token: <%= User.where.not(remember_digest: nil).count%></p>
 <p>Users without remember_token: <%= User.where(remember_digest: nil).count%></p>
 
-<table id="attendance-table" class="">
-	<thead class="table-header">
-		<tr class="header">
-			<th id="name">Name</th>
-			<th id="email" class="email">Email</th>
-			<th id="address" class="address">Address</th>
-			<th id="dob" class="date_of_birth">DOB</th>
-			<th id="campus" class="campus">Campus</th>
-			<th id="time">Time of Check-In</th>
-			<th id="date">Date of Check-In</th>
-		</tr>
-	</thead>
-	<tbody class="">
-		<% @checkins.each do |checkin| %>
-			<tr>
-				<td><%= checkin.user.name %></td>
-				<td class="email"><%= checkin.user.email %></td>
-				<td class="address"><%= checkin.user.address %></td>
-				<td class="date_of_birth"><%= checkin.user.try(:date_of_birth).try(:strftime, "%m/%d/%Y")%></td>
-				<td class="campus"><%= checkin.campus%></td>
-				<td><%= checkin.updated_at.in_time_zone('Eastern Time (US & Canada)').strftime("%I:%M %p %Z")%></td>
-				<td><%= checkin.updated_at.in_time_zone('Eastern Time (US & Canada)').strftime("%m/%d/%Y")%></td>
-			</tr>
-		<% end %>
-	</tbody>
-</table>
+<p><%= link_to "Download CSV", attendance_path(format: "csv"), target: "_blank" %></p>
+
+<% if false %>
+  <% # Hiding this for now due to potential privacy reasons. To download the records,
+     # append `.csv` to the url (e.g. /attendance.csv) %>
+  <table id="attendance-table" class="">
+    <thead class="table-header">
+      <tr class="header">
+        <th id="name">Name</th>
+        <th id="email" class="email">Email</th>
+        <th id="address" class="address">Address</th>
+        <th id="dob" class="date_of_birth">DOB</th>
+        <th id="campus" class="campus">Campus</th>
+        <th id="time">Time of Check-In</th>
+        <th id="date">Date of Check-In</th>
+      </tr>
+    </thead>
+    <tbody class="">
+      <% @checkins.each do |checkin| %>
+      <tr>
+        <td><%= checkin.user.name %></td>
+        <td class="email"><%= checkin.user.email %></td>
+        <td class="address"><%= checkin.user.address %></td>
+        <td class="date_of_birth"><%= checkin.user.try(:date_of_birth).try(:strftime, "%m/%d/%Y")%></td>
+        <td class="campus"><%= checkin.campus%></td>
+        <td><%= checkin.updated_at.in_time_zone('Eastern Time (US & Canada)').strftime("%I:%M %p %Z")%></td>
+        <td><%= checkin.updated_at.in_time_zone('Eastern Time (US & Canada)').strftime("%m/%d/%Y")%></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
