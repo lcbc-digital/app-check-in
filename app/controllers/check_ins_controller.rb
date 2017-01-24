@@ -4,7 +4,7 @@ class CheckInsController < ApplicationController
   def new
   	@check_in = current_user.check_ins.build if logged_in?
   end
-  
+
   def create
     @check_in = current_user.check_ins.build(check_in_params)
     if @check_in.save
@@ -17,6 +17,7 @@ class CheckInsController < ApplicationController
 	end
 
   def confirmation
+    @checkin = CheckIn.includes('user').last
   end
 
 	private

@@ -8,10 +8,10 @@
 	{prompt: 'Select Days'},
 	{ :class => "form-control hide" }
 	) %>
-<h2 style="text-align: left; margin-bottom: 10px; color: black">Campus Totals</h2>
+<h2><%= link_to "Download Attendance", attendance_path(format: "csv"), download: '' %></h2>
+<h2 class="text-left">Campus Totals</h2>
 <% (CheckIn.group(:campus).count).each do |campus| %>
-	<p> <%= campus[0] %> : <%= campus[1] %> </p>
-	
+	<p><%= campus[0] %>: <%= campus[1] %></p>
 <% end %>
 
 <p> Total: <%= CheckIn.count %> </p>
