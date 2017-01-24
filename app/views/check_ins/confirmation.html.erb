@@ -1,3 +1,19 @@
 <%= provide(:title, "Check-In Confirmation") %>
 
-<p class="confirmation-message">Thanks for letting us know you're here</p>
+<style>
+  .demo-card-header-pic .card-header {
+    height: 40vw;
+    background-size: cover;
+    background-position: center;
+  }
+</style>
+
+<div class="card demo-card-header-pic">
+  <div style="background-image:url(<%= asset_path 'checkmark.gif' %>)" valign="bottom" class="card-header color-white no-border"></div>
+  <div class="card-content">
+    <div class="card-content-inner">
+      <p class="color-gray">Welcome back, <%= current_user.name %>!</p>
+      <p>We're glad you're here! When we gather together on the weekend it gives us a sense of community and purpose, allowing us to fully follow Jesus together.</p>
+    </div>
+  </div>
+</div>

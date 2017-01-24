@@ -1,12 +1,13 @@
 <% if @user.errors.any? %>
-	<div id="error_explanation">
-		<div class="alert alert-danger">
-			The form contains <%= pluralize(@user.errors.count, "error") %>.
-		</div>
-		<ul>
-			<% @user.errors.full_messages.each do |msg| %>
-				<li><%= msg %></li>
-			<% end %>
-		</ul>
-	</div>
+<div class="card">
+  <div class="card-header">The form contains <%= pluralize(@user.errors.count, "error") %>.</div>
+  <div class="card-content">
+    <div class="card-content-inner">
+      <% @user.errors.full_messages.each do |msg| %>
+        <p class="color-red"><%= msg %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
+
 <% end %>

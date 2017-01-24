@@ -1,28 +1,41 @@
-<% provide(:title, "Check-In") %>
+<% provide(:title, "Check In") %>
+<%= form_for(@check_in) do |f| %>
 
-<div class="row follow-alert">
-  <div class="col-md-6 col-md-offset-3">
-		<%= form_for(@check_in) do |f| %>
-			
-			<%= select(:check_in, :campus, [
-				['Berks','BRK'],
-				['BranchCreek','BRC'],
-				['Columbia-Montour','CLM'],
-				['Ephrata','EPH'], 
-				['Harrisburg','HBG'],
-				['Lancaster City','CTY'],
-				['Manheim','MNH'],
-				['Waynesboro', 'WYN'],
-				['York','YRK']],
-				{prompt: 'Select Campus'},
-				{ :class => "form-control"}
-				) %>
+  <div class="list-block">
+    <ul>
+      <!-- Smart select item -->
+      <li>
+        <!-- Additional "smart-select" class -->
+        <a href="#" class="item-link smart-select" data-back-on-select="true">
+          <!-- select -->
+          <%= select(:check_in, :campus, [
+            ['Berks','Berks'],
+            ['BranchCreek','BranchCreek'],
+            ['Columbia-Montour','Columbia-Montour'],
+            ['Ephrata','Ephrata'],
+            ['Harrisburg','Harrisburg'],
+            ['Lancaster City','Lancaster City'],
+            ['Manheim','Manheim'],
+            ['Waynesboro', 'Waynesboro'],
+            ['York','York']],
+            {prompt: 'Select Campus'},
+            {}
+            ) %>
 
-			<%= f.submit "Check-In", :id => "submit-check-in", class: "btn btn-default" %>
-		<% end %>
-
-		<%= button_to "Edit Profile", edit_user_path(current_user),  :id => "edit-profile", form_class: "form-button",#user_url(@user), :id => "edit-profile", form_class: "form-button",
-      :class => "btn btn-default", :method => :get %>
-
-	</div>
-</div>
+          <div class="item-content">
+            <div class="item-inner">
+              <!-- Select label -->
+              <div class="item-title">Campus</div>
+              <!-- Selected value, not required -->
+              <div class="item-after">Select...</div>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="content-block">
+    <p><%= f.submit "Check In", :id => "submit-check-in", class: "button button-big active" %></p>
+    <p><%= link_to "Edit Profile", edit_user_path(current_user), :id => "edit-profile", :class => "button button-big color-lightblue", :method => :get %></p>
+  </div>
+<% end %>
